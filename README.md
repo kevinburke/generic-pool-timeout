@@ -2,8 +2,17 @@
 
 # About
 
-  Generic resource pool.  Can be used to reuse or throttle expensive resources such as
-  database connections.
+This is a fork of the [generic-pool][generic-pool] library, supporting
+additional functionality to [time out an acquire() call][timeout-commit].
+This library will go away/become unsupported if/when [that commit gets
+merged][commit].
+
+  Generic resource pool. Can be used to reuse or throttle expensive resources
+  such as database connections.
+
+[timeout-commit]: https://github.com/kevinburke/generic-pool-timeout/commit/63b2bb310cea4fab233e7fba2f39c705e07e9da0
+[generic-pool]: https://github.com/coopernurse/node-pool
+[commit]: https://github.com/coopernurse/node-pool/pull/127
 
 ## Installation
 
