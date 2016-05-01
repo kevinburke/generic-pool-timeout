@@ -1,9 +1,13 @@
 {
-  "name": "generic-pool",
+  "name": "generic-pool-timeout",
   "description": "Generic resource pooling for Node.JS",
   "version": "2.5.0",
   "author": "James Cooper <james@bitmechanic.com>",
   "contributors": [
+    {
+      "name": "Kevin Burke",
+      "email": "kev@inburke.com"
+    },
     {
       "name": "James Cooper",
       "email": "james@bitmechanic.com"
