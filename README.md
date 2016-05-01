@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/coopernurse/node-pool.png)](http://travis-ci.org/coopernurse/node-pool)
+[![build status](https://secure.travis-ci.org/kevinburke/generic-pool-timeout.png)](https://travis-ci.org/kevinburke/generic-pool-timeout)
 
 # About
 
@@ -7,7 +7,7 @@
 
 ## Installation
 
-    $ npm install generic-pool
+    $ npm install generic-pool-timeout
 
 ## History
 
@@ -171,6 +171,23 @@ specifies the caller's relative position in the queue.
 
  // etc..
 ```
+
+## Time out acquisition
+
+By default, acquire() will wait forever for a connection to become available.
+If you would like acquire() to give up after a certain amount of time, pass
+a `timeout` for the third argument:
+
+```javascript
+var pool = new Pool();
+// Timeout after 5 seconds.
+pool.acquire(function(err, client) {
+    pool.release(client);
+}, 0, {timeout: 5000});
+```
+
+To immediately error if the pool is full, set `{timeout: 0}` as the third
+argument.
 
 ## Draining
 
