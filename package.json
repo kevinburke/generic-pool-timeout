@@ -61,7 +61,7 @@
   "main": "lib/generic-pool.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/coopernurse/node-pool.git"
+    "url": "https://github.com/kevinburke/generic-pool-timeout.git"
   },
   "devDependencies": {
     "expresso": ">0.0.0"
